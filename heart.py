@@ -3,10 +3,9 @@ import math
 
 # Настройка окна
 t = turtle.Turtle()
-t.speed(0)  # Устанавливаем максимальную скорость
-t.color("red")  # Цвет линии
-turtle.bgcolor("black")  # Цвет фона
-
+t.speed(0)  
+t.color("red")  
+turtle.bgcolor("black")  
 # Функция для расчета координат сердца
 def corazon(n):
     x = 16 * math.sin(n) ** 3
@@ -15,13 +14,14 @@ def corazon(n):
 
 # Рисуем сердца
 t.penup()
-for i in range(1, 17):  # Увеличиваем размер сердца
-    t.goto(0, 0)  # Перемещаем черепашку в центр
+for i in range(1, 17): 
+    t.goto(0, 0)  
     t.pendown()
-    for n in range(0, 360, 3):  # Угол от 0 до 360 градусов
-        x, y = corazon(math.radians(n))  # Преобразуем градусы в радианы
-        t.goto(x * i, y * i)  # Увеличиваем размер сердца
+    for n in range(0, 360, 3):  
+        x, y = corazon(math.radians(n))  
+        t.goto(x * i, y * i)  
     t.penup()
 
-t.hideturtle()  # Скрываем черепашку
-turtle.done()  # Завершаем работу
+t.hideturtle()  
+
+turtle.done() 
